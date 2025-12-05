@@ -72,7 +72,7 @@ con <- dbConnect(
   MariaDB(),
   user = "sallinguser",
   password = "SallingUser2025!",
-  host = "51.21.127.30",
+  host = "localhost",
   port = 3306,
   dbname = "sallingdb")
 
