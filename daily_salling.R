@@ -58,17 +58,6 @@ for (z in zip_codes) {
   all_data <- bind_rows(all_data, clear)
 }
 
-print(nrow(all_data))
-print(names(all_data))
-
-# Nu kan vi se hvilke data og tabeller vi kan lave og vil have med over i MySQL.
-# Så nu går vi over i MySQL Workdbench og laver de relevante tabeller.
-
-#
-# HERFRA overfører vi R-scriptet til GitHub og henter det ned på Ubuntu-serveren,
-# og kører hele R-scriptet på Ubuntu-serveren, hvor den så connecter til MySQL og indsætter dataen
-#
-
 # Nu er vi klar til at udfylde de to tabeller vi oprettede i MySQL, med vores data:
 # Trin 5 - Opret connection til MySQL:
 con <- dbConnect(
@@ -76,7 +65,6 @@ con <- dbConnect(
   user = "sallinguser",
   password = "SallingUser2025!",
   host = "localhost",
-  port = 3306,
   dbname = "sallingdb")
 
 # Trin 6 - Udvælg de kolonner der er relevante at tage med over i MySQL, omhandlende produktere og tilbuddende:

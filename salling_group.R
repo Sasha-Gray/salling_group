@@ -73,7 +73,6 @@ con <- dbConnect(
   user = "sallinguser",
   password = "SallingUser2025!",
   host = "localhost",
-  port = 3306,
   dbname = "sallingdb")
 
 # Trin 6 - Udvælg de kolonner der er relevante at tage med over i MySQL, omhandlende butikkerne:
@@ -103,8 +102,8 @@ discount <- all_data %>%
 dbWriteTable(con, "discount_products", discount, append = TRUE, row.names = FALSE)
 
 # Trin 8 - Laver man en logfil:
-write(paste(Sys.time(), "- hentet", nrow(all_data), "tilbud"), 
-      file = "foodwaste_log2.txt", 
+write(paste(Sys.time(), "- hentet", nrow(all_data), "tilbud"),
+      file = "/home/ubuntu/salling_group/foodwaste_log.txt",
       append = TRUE)
 
 # Trin 9 - Man skal huske at disconnecte fra databasen og det gøre man ved:
