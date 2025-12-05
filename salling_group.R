@@ -16,7 +16,7 @@ api_token <- "SG_APIM_MK4NSVQMX61WWNDRTCD980PXR6NMEVE4N420CPXF89W8YNVF2CP0"
 zip_codes <- c("3400", "3200", "2840", "2400")
 
 # Trin 3 - Lav en liste til at gemme resultaterne i
-all_data <- list()
+all_data <- data.frame()
 
 # Trin 4 - Lav et for-loop der henter alle dataene ned:
 # Definér først timestamp for hele denne kørsel
@@ -97,7 +97,7 @@ discount <- all_data %>%
     discount_percent = offer.percentDiscount,
     stock = offer.stock,
     stock_unit = offer.stockUnit,
-    run_timestamp = Sys.time())
+    run_timestamp = run_timestamp())
 
 # Trin 7.1 - Udfyld tabellen med produkterne og tilbuddende i MySQL med ovenstående data:
 dbWriteTable(con, "discount_products", discount, append = TRUE, row.names = FALSE)
