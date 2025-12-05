@@ -99,5 +99,14 @@ discount <- all_data %>%
     stock_unit = offer.stockUnit,
     run_timestamp = Sys.time())
 
-# Trin 6.1 - Udfyld tabellen med produkterne og tilbuddende i MySQL med ovenstående data:
+# Trin 7.1 - Udfyld tabellen med produkterne og tilbuddende i MySQL med ovenstående data:
 dbWriteTable(con, "discount_products", discount, append = TRUE, row.names = FALSE)
+
+# Trin 8 - Laver man en logfil:
+write(paste(Sys.time(), "- hentet", nrow(alle_clearances), "tilbud"), 
+      file = "foodwaste_log.txt", 
+      append = TRUE)
+
+# Trin 9 - Man skal huske at disconnecte fra databasen og det gøre man ved:
+dbDisconnect(con)
+
