@@ -97,7 +97,7 @@ dbWriteTable(con, "discount_products", discount, append = TRUE, row.names = FALS
 
 # Trin 7 - Laver man en logfil:
 write(paste(Sys.time(), "- hentet", nrow(all_data), "tilbud"),
-      file = "/home/ubuntu/salling_group/foodwaste_log2.txt",
+      file = "/home/ubuntu/salling_group/foodwaste_log.txt",
       append = TRUE)
 
 # Trin 8 - Man skal huske at disconnecte fra databasen og det gøre man ved:
