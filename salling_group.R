@@ -103,7 +103,7 @@ discount <- all_data %>%
 dbWriteTable(con, "discount_products", discount, append = TRUE, row.names = FALSE)
 
 # Trin 8 - Laver man en logfil:
-write(paste(Sys.time(), "- hentet", nrow(alle_clearances), "tilbud"), 
+write(paste(Sys.time(), "- hentet", nrow(all_data), "tilbud"), 
       file = "foodwaste_log.txt", 
       append = TRUE)
 
