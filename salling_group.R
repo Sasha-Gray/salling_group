@@ -104,7 +104,7 @@ dbWriteTable(con, "discount_products", discount, append = TRUE, row.names = FALS
 
 # Trin 8 - Laver man en logfil:
 write(paste(Sys.time(), "- hentet", nrow(all_data), "tilbud"), 
-      file = "foodwaste_log.txt", 
+      file = "foodwaste_log2.txt", 
       append = TRUE)
 
 # Trin 9 - Man skal huske at disconnecte fra databasen og det gøre man ved:
