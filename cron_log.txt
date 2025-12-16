@@ -184,3 +184,30 @@ The following objects are masked from ‘package:base’:
 
     intersect, setdiff, setequal, union
 
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Warning messages:
+1: Fejl. Status: 429 
+2: Fejl. Status: 429 
+Warning message:
+Fejl. Status: 429 
